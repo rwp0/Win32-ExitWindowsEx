@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Win32-ExitWindowsEx.iml" filepath="$PROJECT_DIR$/.idea/Win32-ExitWindowsEx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Win32-ExitWindowsEx2.iml" filepath="$PROJECT_DIR$/.idea/Win32-ExitWindowsEx2.iml" />
     </modules>
   </component>
 </project>

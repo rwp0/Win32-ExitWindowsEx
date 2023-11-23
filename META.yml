@@ -2,7 +2,7 @@
 #XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
 name:         Win32-ShutDown
 version:      0.01
-version_from: lib/Win32/ShutDown.pm
+version_from: lib/Win32/ExitWindowsEx.pm
 installdirs:  site
 requires:
 

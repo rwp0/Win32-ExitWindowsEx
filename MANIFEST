@@ -3,7 +3,6 @@ Makefile.PL
 MANIFEST
 ppport.h
 README
-ShutDown.xs
-t/Win32-ShutDown.t
-lib/Win32/ShutDown.pm
+ExitWindowsEx.xs
+lib/Win32/ExitWindowsEx.pm
 META.yml                                 Module meta-data (added by MakeMaker)

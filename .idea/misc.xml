@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="Black">
+    <option name="sdkName" value="Python 3.11" />
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MakefileSettings">
+    <option name="linkedExternalProjectsSettings">
+      <MakefileProjectSettings>
+        <option name="buildOptions" value="--makefile=Makefile" />
+        <option name="buildSystemName" value="Makefile.PL (ExtUtils::MakeMaker)" />
+        <option name="cleanTarget" value="" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="preConfigureCommands" value="#!/bin/sh&#10;#&#10;# ExtUtils::MakeMaker template, feel free to customize.&#10;#&#10;[ -f Makefile ] &amp;&amp; &quot;${MAKE:-make}&quot; clean&#10;perl Makefile.PL" />
+        <option name="switches" value="--makefile=Makefile " />
+        <option name="version" value="2" />
+      </MakefileProjectSettings>
+    </option>
+  </component>
+  <component name="MakefileWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11" project-jdk-type="Python SDK" />
 </project>
