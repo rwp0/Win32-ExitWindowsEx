@@ -4,5 +4,5 @@ MANIFEST
 ppport.h
 README
 ExitWindowsEx.xs
-lib/Win32/ExitWindowsEx.pm
+lib/Win32/ExitWindowsEx/OO.pm
 META.yml                                 Module meta-data (added by MakeMaker)
