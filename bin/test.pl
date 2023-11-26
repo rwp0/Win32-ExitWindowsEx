@@ -6,4 +6,5 @@ use Win32::ExitWindowsEx::OO;
 
 my $ewe = Win32::ExitWindowsEx::OO -> new( force => true );
 
-$ewe -> log_off();
+$ewe -> lock_screen();
+# $ewe -> log_off();

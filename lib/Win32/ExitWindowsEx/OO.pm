@@ -12,29 +12,33 @@ field $force :param = false;
 
 method log_off ( ) {
   if ( $force ) {
-    Win32::ExitWindowsEx::_force_log_off();
+    Win32::ExitWindowsEx::force_log_off();
   }
   else {
-    Win32::ExitWindowsEx::_log_off();
+    Win32::ExitWindowsEx::log_off();
   }
 }
 
 method restart ( ) {
   if ( $force ) {
-    Win32::ExitWindowsEx::_force_restart();
+    Win32::ExitWindowsEx::force_restart();
   }
   else {
-    Win32::ExitWindowsEx::_restart();
+    Win32::ExitWindowsEx::restart();
   }
 }
 
 method shut_down ( ) {
   if ( $force ) {
-    Win32::ExitWindowsEx::_force_shut_down();
+    Win32::ExitWindowsEx::force_shut_down();
   }
   else {
-    Win32::ExitWindowsEx::_shut_down();
+    Win32::ExitWindowsEx::shut_down();
   }
+}
+
+method lock_screen ( ) {
+  Win32::ExitWindowsEx::lock_screen();
 }
 
 =head1 NAME
@@ -64,3 +68,10 @@ C. N. Drake, E<lt>christopher@pobox.comE<gt>
 # https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-exitwindowsex
 # https://learn.microsoft.com/en-us/windows/win32/shutdown/system-shutdown-reason-codes
 # https://learn.microsoft.com/en-us/windows/win32/shutdown/shutting-down
+
+# https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-lockworkstation
+# https://learn.microsoft.com/en-us/windows/win32/shutdown/how-to-lock-the-workstation
+
+
+# Header: winuser.h
+# Library: user32.dll
