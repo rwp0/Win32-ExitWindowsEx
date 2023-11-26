@@ -1,17 +1,42 @@
-use 5.006;
+use v5.38;
 use ExtUtils::MakeMaker;
-# See lib/ExtUtils/MakeMaker.pm for details of how to influence
-# the contents of the Makefile that is written.
+
+# Manually add "-lpowrprof" to Makefile's LDLOADLIBS for now
+
 WriteMakefile(
-    NAME              => 'Win32::ExitWindowsEx',
-    VERSION_FROM      => 'lib/Win32/ExitWindowsEx/OO.pm', # finds $VERSION
-    PREREQ_PM         => {}, # e.g., Module::Name => 1.1
-    ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
-      (ABSTRACT_FROM  => 'lib/Win32/ExitWindowsEx/OO.pm', # retrieve abstract from module
-       AUTHOR         => 'C. N. Drake, <christopher@pobox.com>') : ()),
-    LIBS              => [''], # e.g., '-lm'
-    DEFINE            => '', # e.g., '-DHAVE_SOMETHING'
-    INC               => '-I.', # e.g., '-I. -I/usr/include/other'
-	# Un-comment this if you add C files to link with later:
-    # OBJECT            => '$(O_FILES)', # link all the C files too
+  VERBINST      => 1 ,
+  NAME          => 'Win32::ExitWindowsEx' ,
+  VERSION_FROM  => 'lib/Win32/ExitWindowsEx/OO.pm' ,
+  ABSTRACT_FROM => 'lib/Win32/ExitWindowsEx/OO.pm' ,
+  AUTHOR        => 'Elvin Aslanov  <rwp.primary@gmail.com>' ,
+  # LIBS          => [ '-LC:\Windows\System32 -lpowrprof' ] ,
+  # DEFINE        => ' ' ,             # e.g., ' - DHAVE_SOMETHING '
+  # INC           => ' - I . ' ,          # e.g., ' - I . - I / usr / include / other ',
 );
+
+# Makefile (with no LIBS):
+# LDLOADLIBS =  -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32
+
+# qw(
+# -lmoldname
+# -lkernel32
+# -luser32
+#  -lgdi32
+# -lwinspool
+# -lcomdlg32
+#  -ladvapi32
+#  -lshell32
+#  -lole32
+#  -loleaut32
+#  -lnetapi32
+#  -luuid
+#  -lws2_32
+#  -lmpr
+#  -lwinmm
+#  -lversion
+#  -lodbc32
+#  -lodbccp32
+#  -lcomctl32
+# );
+
+# LDLOADLIBS

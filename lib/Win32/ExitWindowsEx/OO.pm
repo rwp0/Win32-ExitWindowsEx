@@ -5,10 +5,16 @@ use XSLoader;
 
 XSLoader::load( "Win32::ExitWindowsEx" );
 
+# package Win32::ExitWindowsEx::OO;
 class Win32::ExitWindowsEx::OO;
+
+# TODO: switch user, hibernate
 
 field $force :param = false;
 # field $reason;
+# field $verbose;
+# field $confirm;
+# field $sleep;
 
 method log_off ( ) {
   if ( $force ) {
@@ -39,6 +45,14 @@ method shut_down ( ) {
 
 method lock_screen ( ) {
   Win32::ExitWindowsEx::lock_screen();
+}
+
+method sleep ( ) {
+  Win32::ExitWindowsEx::sleep();
+}
+
+method hibernate ( ) {
+  Win32::ExitWindowsEx::hibernate();
 }
 
 =head1 NAME
@@ -72,6 +86,8 @@ C. N. Drake, E<lt>christopher@pobox.comE<gt>
 # https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-lockworkstation
 # https://learn.microsoft.com/en-us/windows/win32/shutdown/how-to-lock-the-workstation
 
+
+# https://learn.microsoft.com/en-us/windows/win32/api/powrprof/nf-powrprof-setsuspendstate
 
 # Header: winuser.h
 # Library: user32.dll

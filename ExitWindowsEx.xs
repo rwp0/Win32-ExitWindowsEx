@@ -5,6 +5,9 @@
 
 #include <stdbool.h>
 
+// #include <windows.h>
+#include <powrprof.h>
+
 // winuser.h user32.dll
 
 MODULE = Win32::ExitWindowsEx  PACKAGE = Win32::ExitWindowsEx
@@ -50,5 +53,17 @@ int force_log_off()
 bool lock_screen()
   CODE:
     RETVAL = LockWorkStation() ;
+  OUTPUT:
+    RETVAL
+
+bool sleep()
+  CODE:
+    RETVAL = SetSuspendState(false, false, false);
+  OUTPUT:
+    RETVAL
+
+bool hibernate()
+  CODE:
+    RETVAL = SetSuspendState(true, false, false);
   OUTPUT:
     RETVAL
